@@ -1,0 +1,27 @@
+<!D0CTYPE html>
+<html lang = "pt-br">
+<head>
+	
+	<title>Java script</title>
+	<meta charset = "UTF-8">
+	<script>
+		var quebrada = false; // Não está quebrada
+		function mudaLampada(tipo){
+			if(!quebrada){ // Lampada esta quebrada
+			document.getElementById("luz").src = "_imagens/" +tipo + ".jpg";
+				if(tipo=='lampada-quebrada'){ /* Se o parametro tipo passado for lampada-quebrada, imagem quebrada permanece com o true*/
+					quebrada = true;
+				
+				}
+			}
+		}
+		
+			
+	</script>
+	</head>
+	<body>
+	<h1>Acenda a lampada</h1>
+	<img src ="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick = "mudaLampada('lampada-quebrada')"/>
+	
+	</body>
+</html>
